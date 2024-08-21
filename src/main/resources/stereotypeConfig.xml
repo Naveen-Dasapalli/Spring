@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd
+	">
+	
+	<context:component-scan base-package="com.springcore.stereotype.component"></context:component-scan>
+	<util:list list-class="java.util.ArrayList" id="cources">
+		<value>Java</value>
+		<value>Python</value>
+		<value>Spring</value>
+		<value>C++</value>
+	</util:list>
+	
+	<util:map map-class="java.util.TreeMap" id="marks">
+		<entry key="Java" value="99"/>
+		<entry key="JavaEE" value="98"/>
+		<entry key="Spring" value="100"/>
+	</util:map>
+	
+	<util:properties id="credentials">
+		<prop key="Username">naveen@gmail.com</prop>
+		<prop key="Password">*************</prop>
+	</util:properties>
+
+</beans>

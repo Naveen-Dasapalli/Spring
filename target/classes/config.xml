@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Using Property element to inject value-->
+	<bean name="student1" class="com.springcore.setterDI.Student"> 
+		
+		<property name="studentID">
+			<value>1234</value>
+		</property>
+		
+		<property name="studentName">
+			<value>Naveen</value>
+		</property>
+		
+		<property name="studentAddress">
+			<value>Gadag</value>
+		</property>
+		
+	</bean>
+	
+	<!-- using attribute to inject value-->
+	<bean name="student2" class="com.springcore.setterDI.Student"> 
+		
+		<property name="studentID" value="4321"/>
+		
+		<property name="studentName" value="Nitin"/>
+
+		<property name="studentAddress" value="Gadag, Hubli"/>
+		
+	</bean> 
+	
+	<!-- using p:schema to inject value-->
+	<bean name="student3" class="com.springcore.setterDI.Student" p:studentID="10000" p:studentName="Bob" p:studentAddress="NewYork"></bean>
+</beans>
